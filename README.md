@@ -11,7 +11,7 @@ Video.js plugin for casting via AirPlay and (hopefully soon) Chromecast
 > Temporary until published
 
 ```sh
-npm install https://github.com/kevireilly/videojs-casting
+npm install kevireilly/videojs-casting
 ```
 
 > This plugin isn't published just yet
@@ -64,6 +64,16 @@ require(['video.js', 'videojs-casting'], function(videojs) {
   player.casting();
 });
 ```
+
+## Try it
+To try AirPlay on a demo video page:
+```
+git clone https://github.com/kevireilly/videojs-casting.git
+cd videojs-casting
+npm install
+npm start
+```
+Navigate to `http:1.2.3.4:9999` on your AirPlay capable device or browser (Safari).
 
 ## License
 
