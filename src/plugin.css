@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 
-.video-js .vjs-casting-airplay .vjs-icon-placeholder:before {
-  content: "\f122";
-  font-family: VideoJS, serif;
+.video-js .vjs-casting-airplay .vjs-icon-placeholder svg {
+  width: 18px;
+  height: 18px;
 }
