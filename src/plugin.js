@@ -43,13 +43,9 @@ class Casting extends Plugin {
     if (airPlayElement || !mediaElement) return;
 
     const position = this.options.airplay.position ?? this.player.controlBar.children().length;
-    const airPlayButton = this.player.controlBar.addChild('button', {
-      clickHandler: () => {
-        mediaElement?.webkitShowPlaybackTargetPicker();
-      },
-      ...this.options.airplay
-    }, position);
-
+    const airPlayButton = this.player.controlBar.addChild('button', this.options.airplay, position);
+    airPlayButton.addClass(this.options.airplay.className);
+    airPlayButton.on('click', () => { mediaElement?.webkitShowPlaybackTargetPicker(); });
     airPlayButton.el().querySelector('.vjs-icon-placeholder').innerHTML = this.options.airplay.icon;
 
     const handleTargetAvailabilityChanged = ({ availability }) => {
